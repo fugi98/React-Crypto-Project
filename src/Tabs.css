@@ -1,0 +1,53 @@
+.tabs-container {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(22 22 22 / 0%);
+  padding: 10px 0;
+  z-index: 1000; /* Make sure it stays above other content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: auto; /* Make the tabs scrollable */
+  white-space: nowrap; /* Prevent tabs from wrapping */
+  background-color: rgba(23, 23, 23, 0.286);
+  padding: 0px;
+  border-radius: 4vh;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.tabs::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.tabs a {
+  margin: 0 0px;
+  text-decoration: none;
+  color: #dddcdc;
+  padding: 15px 20px;
+  display: inline-block;
+  font-size: 2.4vh;
+  font-weight: 600;
+  border-radius: 4vh;
+}
+
+
+.tabs a.active {
+  background-color: #2f2f2f; /* Set the background color for the active tab */
+  color: #fff; /* Ensure the text color contrasts well with the background */
+  border-bottom: 2px solid #333;
+}
+
+@media (max-width: 600px) {
+  .tabs-container {
+    justify-content: center; /* Align tabs to the start for smaller screens */
+  }
+
+  .tabs a {
+    margin: 0 ;
+  }
+}

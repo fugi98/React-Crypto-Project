@@ -1,0 +1,45 @@
+/* Header.css */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  margin-right: 10px;
+  border-radius: 20vh;
+}
+
+.brand-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .brand-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-title {
+    font-size: calc(100% - 8px);
+  }
+  .navbar-brand img {
+    margin-right: 10px;
+    border-radius: 20vh;
+    width: 45px;
+  }
+}
+
+.navbar-nav .nav-link {
+  margin-right: 15px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #fff; /* Change to desired hover color */
+}
+
+button {
+  border-radius: 20px; /* Optional styling */
+}

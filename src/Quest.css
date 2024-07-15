@@ -1,0 +1,54 @@
+/* Quest.css */
+.quest {
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #23232377;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 2vh;
+  margin: 1vh 1.5vh;
+}
+
+.quest-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.quest-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.quest-details {
+  flex: 1;
+}
+
+.progress-bar1 {
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progress1 {
+  background-color: #4caf50;
+  height: 10px;
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  .quest-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quest-image {
+    margin: 0 0 10px 0;
+  }
+
+  .quest-details {
+    text-align: center;
+  }
+}

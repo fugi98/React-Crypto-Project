@@ -1,0 +1,27 @@
+/* Info css */
+.info {
+  width: 100%;
+  max-width: 45vh;
+  height: auto;
+  background-color: rgb(63, 62, 62);
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.info h3 {
+  font-size: 30px;
+  font-weight: 700;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .info {
+    max-width: 75vh;
+  }  
+ }
+
+ @media (max-width: 600px) {
+  .info {
+    max-width: 50vh;
+  }  
+ }

@@ -1,0 +1,69 @@
+.cryptoDraw {
+  width: 100%;
+  max-width: 45vh;
+  height: auto;
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.draw {
+  position: relative;
+  background-image: url('../public/images/info.png'); /* Update this path */
+  background-size: cover;
+  background-position: center;
+  height: 35vh; /* Adjust the height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  border: 2px solid rgba(143, 143, 143, 0.293);
+}
+
+.draw::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  z-index: 1;
+}
+
+.draw-content {
+  position: relative;
+  z-index: 2;
+}
+
+.claimButton {
+  background-color: #f0f024;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .cryptoDraw {
+    max-width: 75vh;
+  }
+  
+ }
+
+@media (max-width: 600px) {
+  .cryptoDraw {
+    max-width: 50vh;
+  }
+  
+ .claimButton{
+  padding: 5px 8px;
+ }
+}
+

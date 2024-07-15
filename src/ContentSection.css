@@ -1,0 +1,239 @@
+/* ContentSection.css */
+.content-section {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+/* Background Animation */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.dot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background-color: #bf960b;
+  border-radius: 50%;
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg) translateX(100px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(100px) rotate(-360deg);
+  }
+}
+
+/* Video section */
+.video-wrapper {
+  margin: 20px 0;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.video-wrapper iframe {
+  width: calc(100% - 40%);
+  height: 500px;
+}
+/* Vedio section Responsive adjustments */
+@media (max-width: 768px) {
+  .video-wrapper iframe {
+    height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .video-wrapper iframe {
+    height: 200px;
+  }
+}
+
+/* Crypto sections */
+.cryptoSection, .cryptoSection2 {
+  display: flex;
+  justify-content: center; /* Center the contents horizontally */
+  gap: 10vh; /* Space between sidebar and main content */
+  margin-bottom: 40px;
+}
+
+.cryptoSection, .cryptoSection2 {
+  flex-wrap: wrap;
+}
+
+.cryptoSection {
+  flex-direction: row; /* Ensure content in cryptoSection is left-to-right */
+}
+
+.cryptoSection2 {
+  flex-direction: row-reverse; /* Ensure content in cryptoSection2 is right-to-left */
+}
+
+.sidebar, .sidebar2 {
+  background-color: #1010107a;
+  border-radius: 10vh;
+  border: 1px solid grey;
+  padding: 4.5vh 2.5vh;
+  width: 60vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.topSideBar, .topSideBar2 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.topSideBar img, .topSideBar2 img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: auto;
+  border-radius: 10vh;
+  margin-left: auto;
+}
+
+.topSideBar-details, .topSideBar-details2 {
+  flex: 1;
+}
+
+.quests, .quests2 {
+  border-radius: 6vh;
+  overflow-y: auto;
+  max-height: 50vh;
+  border: 1px solid #31313182;
+  background-color: #141414d9;
+}
+
+.main-content, .main-content2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #08080800;
+  padding: 20px;
+}
+
+.learn, .learn2 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.learn img, .learn2 img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px; /* Space between image and button */
+}
+
+.learn p, .learn2 p{
+  width: calc(100% - 10vh);
+}
+
+.learn button, .learn2 button {
+  padding: 10px 20px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Cards section */
+.cards, .cards2 {
+  background-color: #080808;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.title, .title2 {
+  margin-bottom: 20px;
+}
+
+.cards-container, .cards-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 84px;
+}
+
+@media (max-width: 768px) {
+  .cards-container, .cards-container2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cryptoSection, .cryptoSection2 {
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh; /* Adjust space for smaller screens */
+  }
+
+  .sidebar, .sidebar2 {
+    width: calc(100% - 40vh);
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 20px;
+    border-radius: 0;
+  }
+
+  .learn p, .learn2 p{
+    width: auto;
+  }
+
+  .main-content, .main-content2 {
+    margin: 0;
+    padding: 20px;
+    border-radius: 0;
+  }
+
+  .learn, .learn2 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .learn img, .learn2 img {
+    margin-bottom: 0; /* Adjust spacing between image and button */
+    margin-right: 10px; /* Space between image and button */
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar, .sidebar2 {
+    width: calc(100% - 10vh);
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 20px;
+    border-radius: 0;
+  }
+
+  .topSideBar, .topSideBar2{
+    display: flex;
+    flex-direction: column;
+  }
+}

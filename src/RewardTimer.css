@@ -1,0 +1,41 @@
+
+.timer {
+  width: 100%;
+  max-width: 45vh;
+  height: 20vh;
+  background: #1f1f1f37;
+  opacity: 0.8;
+  border-radius: 1vh;
+  position: relative;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.timer p {
+  font-size: 3vh;
+  font-weight: 900;
+  text-align: center;
+}
+
+.timerDisplay {
+  display: flex;
+  justify-content: space-between;
+}
+
+.timerUnit {
+  text-align: center;
+  position: relative;
+  margin: auto ;
+}
+
+.value {
+  font-size: calc(10vh - 5.7vh);
+  font-weight: bold;
+}
+
+.unit {
+  font-size: calc(10vh - 7.7vh);
+  opacity: 0.55;
+  position: relative;
+  display: block;
+}

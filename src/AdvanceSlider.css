@@ -1,0 +1,70 @@
+/* Slider container */
+.slider-container {
+  margin: 10vh auto; /* Center the slider horizontally */
+  max-width: 1000px; /* Maximum width of the slider */
+  background-color: rgb(50, 50, 50);
+  border-radius: 3vh;
+
+}
+
+/* Slide items */
+.slide-item {
+  display: flex !important; /* Use flexbox to place image and content next to each other */
+  align-items: flex-start; /* Align items to the top */
+  padding: 20px; /* Padding around each slide */
+  flex-direction: row;
+}
+
+/* Slide images */
+.slide-item img {
+  max-width: 50%; /* Ensure image doesn't exceed 50% of slide width */
+  height: 60vh; /* Maintain aspect ratio */
+  margin-right: 20px; /* Space between image and content */
+}
+
+/* Slide content */
+.slide-item .slider-content {
+  flex: 1; /* Take remaining space beside image */
+  display: flex; /* Use flexbox for content */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: flex-start; /* Align content to the top */
+  text-align: left;
+}
+
+/* slide button */
+.slick-prev:before, .slick-next:before {
+  font-family: 'slick';
+  font-size: 40px;
+  line-height: 1;
+  opacity: .75;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+.slick-next {
+  right: -5px;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .slide-item {
+    flex-direction: column; /* Stack image on top of content on smaller screens */
+  }
+  .slider-content p{
+    font-size: 0.8rem;
+  }
+  .slide-item img {
+    max-width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .slide-item img {
+    max-width: 100%;
+  }
+  .slider-content p{
+    font-size: 0.66rem;
+  }
+}
